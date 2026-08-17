@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Task Manager - Group 19</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hero-header">
+        <div class="header-container">
+            <span class="group-badge">PROJECT 1 GROUP 13 &bull; ICT INNOVATION PROJECT</span>
+            <h1>DAILY TASK MANAGER</h1>
+            <p class="subtitle">Digital Task Tool</p>
+            <hr class="header-divider">
+            <p class="header-desc">A practical demonstration of a web application to add, manage, edit, and delete daily
+                tasks using Local Storage.</p>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <!-- Section 1: Requirements -->
+        <section class="card glass">
+            <div class="card-badge">01</div>
+            <h2>Project Requirements</h2>
+            <div class="card-content">
+                <ul class="requirements-list">
+                    <li>Create a digital task manager where users can write, edit, organize, and delete daily tasks.
+                    </li>
+                    <li>Add new tasks.</li>
+                    <li>Display all saved tasks.</li>
+                    <li>Edit existing tasks.</li>
+                    <li>Delete tasks.</li>
+                    <li>Mark tasks as completed.</li>
+                    <li>Store tasks using Local Storage.</li>
+                    <li>Display task statistics (total and completed).</li>
+                    <li>Prevent saving empty tasks.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 2: Create Task -->
+        <section class="card glass">
+            <div class="card-badge">02</div>
+            <h2 id="form-title">New Task</h2>
+            <div class="card-content">
+                <form id="task-form">
+                    <input type="hidden" id="task-id">
+                    <div class="form-group">
+                        <label for="task-title">TASK DESCRIPTION</label>
+                        <input type="text" id="task-title" required placeholder="What do you need to do today?">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="save-btn" class="btn-primary">SAVE TASK</button>
+                        <button type="button" id="cancel-edit-btn" class="btn-secondary hidden">CANCEL EDIT</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Section 3: Saved Tasks -->
+        <section class="card glass">
+            <div class="card-badge">03</div>
+            <div class="records-header">
+                <h2>Saved Tasks</h2>
+                <div class="stats-container">
+                    <p>Total Tasks: <strong id="totalTasks">0</strong> | Completed: <strong
+                            id="completedTasks">0</strong></p>
+                </div>
+            </div>
+            <div class="card-content">
+                <div id="tasks-grid" class="notes-grid">
+                    <!-- Tasks will be injected here -->
+                </div>
+                <div id="empty-state" class="empty-state">
+                    <p>No tasks found. Add a new task to get started.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Group Members -->
+        <section class="card glass">
+            <div class="card-badge">04</div>
+            <h2>Group Members</h2>
+            <div class="card-content">
+                <p
+                    style="color: var(--text-secondary); margin-bottom: 1.5rem; font-weight: 500; text-transform: uppercase;">
+                    Project 1 Group 13</p>
+                <div class="member-list">
+                    <div class="member-item">
+                        <span class="member-index">01</span>
+                        <div class="member-info">
+                            <strong>Ejim Ogechukwu Gloria</strong>
+                            <span>2023030210446</span>
+                        </div>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-index">02</span>
+                        <div class="member-info">
+                            <strong>Ede Joshua okenna</strong>
+                            <span>2023030211786</span>
+                        </div>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-index">03</span>
+                        <div class="member-info">
+                            <strong>Eze Emmanuel Ikedichukwu</strong>
+                            <span>2023030210470</span>
+                        </div>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-index">04</span>
+                        <div class="member-info">
+                            <strong>Eze Favour Chibueze </strong>
+                            <span>2023030212993</span>
+                        </div>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-index">05</span>
+                        <div class="member-info">
+                            <strong>Eneh Sixtus Onyedika</strong>
+                            <span>2023030210374</span>
+                        </div>
+                    </div>
+                    <div class="member-item">
+                        <span class="member-index">06</span>
+                        <div class="member-info">
+                            <strong>Ewo chinonso Emmanuel</strong>
+                            <span>2023030210251</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2026 Project 1 Group 13 &bull; ICT Innovation Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
